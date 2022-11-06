@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: montserrat;
+        background: linear-gradient(120deg,#2980b9,#8e44ad);
+    }
+    .register form{
+        position: absolute;
+       width: 400px;
+       left: 50%;
+        transform: translate(-50%);
+       /* background: linear-gradient(); */
+       background-color: white;
+       /* background: url("https://i.pinimg.com/222x/8a/d7/7d/8ad77d73153524e5d5158de7a99dd4b1.jpg");
+       background-size: 500px; */
+       background-position: center;
+        border-radius: 10px;
+    }
+    .register h2{
+        text-align: center;
+        padding: 0 0 20px 0;
+        border-bottom: 1px solid silver;
+    }
+    .register form{
+        border: 1px solid #e9f4fb;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    form .txt_feild{
+        position: relative;
+        border-bottom: 2px solid #adadad;
+        margin: 30px 0;
+       
+    }
+    .txt_feild input{
+        width:100%;
+        padding: 0 5px;
+        height: 40px;
+        font-size: 16px;
+        border: none;
+        background: none;
+        outline: none;
+
+    }
+    /* .checkmark{
+        width: 200px;
+        height: 60px;
+
+    } */
+    input[type="radio"]{
+        width: 15px;
+        height: 10px;
+
+    }
+    
+    /* .txt_feild input:focus ~ p,
+    .txt_feild input:valid ~ p{
+        top: -10px;
+        color: #2691d9;
+
+    } */
+    .msg{
+        margin: -5px 0 20px 5px;
+        padding-top: 10px;
+        color: #a6a6a6;
+        cursor: pointer;
+    }
+    .sign_in{
+        margin:30px 0;
+        text-align: center;
+        font-size: 16px;
+        color: #666666;
+
+    }
+    button{
+        width: 100%;
+        height: 30px;
+        border: 1px solid;
+        background-color: rgb(73, 148, 224);
+        border-radius: 25px;
+        font-size: 18px;
+        color: #e9f4fb;
+        font-weight: 700;
+        cursor:pointer;
+        outline: none;
+    }
+    button a{
+        text-decoration: none;
+        color: white;
+    }
+    .log_in{
+        padding-bottom: 20px;
+    }
+    </style>
+<body>
+    <div class="register">
+        <h2>Blood Doner Details</h2>
+        <form method="post">
+            <div class="txt_feild">
+                <p>Name</p>
+                <p><input type="text" name="name" placeholder="name" required></p>
+                <p>Age</p>
+                <p><input type="number" name="age" placeholder="age" required></p>
+                <p>Date of Birth</p>
+                <p><input type="date" name="date" required></p>
+                <div class="sex">
+                    <fieldset>
+                        <legend>Gender</legend>
+                        <label class="container">Male
+                            <input type="radio" name="checkbox" value="male"required>
+                            <span class="checkmark"></span>
+                          </label>
+                          
+                          <label class="container">Female
+                            <input type="radio" name="checkbox" value="femle"required>
+                            <span class="checkmark"></span>
+                          </label>
+                          
+                          <label class="container">Non-Binary
+                            <input type="radio" name="checkbox" value="non-binary"required>
+                            <span class="checkmark"></span>
+                          </label>
+                          
+                          <label class="container">Other
+                            <input type="radio" name="checkbox" value="other"required>
+                            <span class="checkmark"></span>
+                          </label>
+                    </fieldset>
+                </div><br>
+                <p>Married<input type="radio" name="no" value="yes"required>
+                    Un-Married<input type="radio" name="no" value="no"required></p><br>
+                <p>Weight</p>
+                <input type="number" name="weight" id="weight" placeholder="weight"required>
+                <p>Blood Group</p>
+                <p><select name="dpBloodGroup" id="dpBloodGroup"required>
+                    <option value="Select">----------Select----------</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="A1+">A1+</option>
+                    <option value="A1-">A1-</option>
+                    <option value="A1B+">A1B+</option>
+                    <option value="A1B-">A1B-</option>
+                    <option value="A2+">A2+</option>
+                    <option value="A2-">A2-</option>
+                    <option value="A2B+">A2B+</option>
+                    <option value="A2B-">A2B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="Bombay Blood Group">Bombay Blood Group</option>
+                    <option value="INRA">INRA</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select></p>
+                <p>Place</p>
+                <p><input type="text" name="place" placeholder="palce" required></p>
+                <p>District</p>
+                <p><select name="district" id="district" required>
+                    <option value="">----------select----------</option>
+                    <option value="https://www.delhimetrotimes.in/kerala/alappuzha/list-of-tehsil-in-alappuzha.html" >Alappuzha</option>
+                    <option value="https://www.delhimetrotimes.in/kerala/ernakulam/list-of-tehsil-in-ernakulam.html" >Ernakulam</option>
+                    <option value="https://www.delhimetrotimes.in/kerala/idukki/list-of-tehsil-in-idukki.html" >Idukki</option>
+                    <option value="https://www.delhimetrotimes.in/kerala/kannur/list-of-tehsil-in-kannur.html" >Kannur</option>
+                    <option value="https://www.delhimetrotimes.in/kerala/kasargod/list-of-tehsil-in-kasargod.html" >Kasargod</option>
+                    <option value="https://www.delhimetrotimes.in/kerala/kollam/list-of-tehsil-in-kollam.html" >Kollam</option>
+                    <option value="https://www.delhimetrotimes.in/kerala/kottayam/list-of-tehsil-in-kottayam.html" >Kottayam</option>
+                    <option value="https://www.delhimetrotimes.in/kerala/kozhikode/list-of-tehsil-in-kozhikode.html" >Kozhikode</option>
+                    <option value="https://www.delhimetrotimes.in/kerala/malappuram/list-of-tehsil-in-malappuram.html" >Malappuram</option>
+                    <option value="https://www.delhimetrotimes.in/kerala/palakkad/list-of-tehsil-in-palakkad.html" >Palakkad</option>
+                    <option value="https://www.delhimetrotimes.in/kerala/pathanamthitta/list-of-tehsil-in-pathanamthitta.html" >Pathanamthitta</option>
+                    <option value="https://www.delhimetrotimes.in/kerala/thiruvananthapuram/list-of-tehsil-in-thiruvananthapuram.html" >Thiruvananthapuram</option>
+                    <option value="https://www.delhimetrotimes.in/kerala/thrissur/list-of-tehsil-in-thrissur.html" >Thrissur</option>
+                    <option value="https://www.delhimetrotimes.in/kerala/wayanad/list-of-tehsil-in-wayanad.html" >Wayanad</option>
+                </select></p>
+                <p>Taluk</p>
+                <p><input type="text" name="taluk" placeholder="taluk" required></p>
+                <p>Phone Number</p>
+                <p><input type="number" name="phoneno" placeholder="phone number" required></p>
+                <p>Email ID</p>
+                <p><input type="email" name="email" placeholder="email" required></p>
+                <fieldset>
+                    <legend>Optional</legend>
+                    <p>Address</p>
+                    <p><textarea name="address" id="address" cols="40" rows="4" ></textarea></p>
+                    <p>Occupation</p>
+                    <p><input type="text" name="occupation" placeholder="occupation"></p>
+                    <p>Remark</p>
+                    <p><textarea name="remark"id="remark" cols="40" rows="4" placeholder=""></textarea></p>
+                </fieldset>
+                <div class="msg"> Make sure the details are correct</div>
+                <div class="log_in"><button>
+                    <a type="button" href="donor_Info.html"> NEXT</a>
+                   </button> </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
